@@ -1,6 +1,5 @@
 import express, { Router } from 'express';
 import authRoute from './auth.route';
-import docsRoute from './swagger.route';
 import userRoute from './user.route';
 import config from '../../config/config';
 
@@ -24,10 +23,10 @@ const defaultIRoute: IRoute[] = [
 
 const devIRoute: IRoute[] = [
   // IRoute available only in development mode
-  {
-    path: '/docs',
-    route: docsRoute,
-  },
+  // {
+  //   path: '/docs',
+  //   route: docsRoute,
+  // },
 ];
 
 defaultIRoute.forEach((route) => {
